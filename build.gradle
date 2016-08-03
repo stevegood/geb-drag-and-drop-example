@@ -14,7 +14,7 @@ ext {
   ext {
     groovyVersion = '2.4.7'
     gebVersion = '0.13.1'
-    seleniumVersion = '2.52.0'
+    seleniumVersion = '2.53.1'
     chromeDriverVersion = '2.22'
   }
 }
@@ -37,7 +37,7 @@ dependencies {
   testCompile "org.codehaus.groovy:groovy-all:$groovyVersion"
   testCompile "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
   testCompile "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
-  testCompile "org.seleniumhq.selenium:selenium-htmlunit-driver:$seleniumVersion"
+  testCompile "org.seleniumhq.selenium:selenium-htmlunit-driver:2.52.0"
 }
 
 def loadProperties() {
@@ -76,6 +76,6 @@ chromeTest {
 }
 
 test {
-  dependsOn firefoxTest
+  dependsOn chromeTest
   enabled = false
 }

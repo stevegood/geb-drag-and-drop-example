@@ -26,7 +26,6 @@ environments {
   htmlunit {
     def driverInstance = new HtmlUnitDriver()
     driverInstance.manage().window().maximize()
-    driverInstance.javascriptEnabled = true
     driverInstance
   }
 }
